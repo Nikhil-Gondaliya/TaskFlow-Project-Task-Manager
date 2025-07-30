@@ -16,7 +16,7 @@ const taskSchema = z
     }),
     description: z.string().optional(),
     date: z.string(),
-    status: z.enum(["todo", "inprogress", "done"]),
+    status: z.enum(["todo", "in-progress", "done"]),
   })
   .superRefine((data, ctx) => {
     console.log("Validating task data:", data);
@@ -92,7 +92,7 @@ export default function TaskForm({
         register={register("status")}
         options={[
           { value: "todo", label: "To Do" },
-          { value: "inprogress", label: "In Progress" },
+          { value: "in-progress", label: "In Progress" },
           { value: "done", label: "Done" },
         ]}
       />

@@ -17,7 +17,7 @@ interface ColumnProps {
 
 const statusTitles = {
   todo: "To Do",
-  inprogress: "In Progress",
+  "in-progress": "In Progress",
   done: "Done",
 };
 

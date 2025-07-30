@@ -31,7 +31,7 @@ Task.init(
     },
     status: {
       type: DataTypes.ENUM("todo", "in-progress", "done"),
-      defaultValue: "todo",
+      defaultValue: "in-progress",
     },
     projectId: {
       type: DataTypes.INTEGER,

@@ -157,7 +157,7 @@ export default function KanbanBoard({ projectId }: KanbanBoardProps) {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4">
-              {["todo", "inprogress", "done"].map((status) => (
+              {["todo", "in-progress", "done"].map((status) => (
                 <div className="w-full md:w-1/3" key={status}>
                   <Column
                     status={status as Task["status"]}

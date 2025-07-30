@@ -69,7 +69,7 @@ export default function TaskCard({
 
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mt-2">
           <div className="flex flex-wrap gap-2">
-            {["todo", "inprogress", "done"]
+            {["todo", "in-progress", "done"]
               .filter((s) => s !== task.status)
               .map((s) => (
                 <Button

@@ -9,28 +9,20 @@ if (!DB_NAME || !DB_USER || !DB_PASS || !DB_HOST || !DB_PORT) {
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const sequelize = new Sequelize(
-  DB_NAME,
-  DB_USER,
-  DB_PASS,
-  {
-    host: DB_HOST,
-    port: parseInt(DB_PORT, 10),
-    dialect: "postgres",
-    dialectModule: pg,
-    dialectOptions: isProduction
-      ? {
-          ssl: {
-            require: true,
-            rejectUnauthorized: false,
-          },
-        }
-      : {},
-    logging: false,
-  }
-);
-
-
-
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
+  host: DB_HOST,
+  port: parseInt(DB_PORT, 10),
+  dialect: "postgres",
+  dialectModule: pg,
+  dialectOptions: isProduction
+    ? {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false,
+        },
+      }
+    : {},
+  logging: false,
+});
 
 export default sequelize;

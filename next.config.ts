@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
     config.ignoreWarnings = [
       {
         module: /node_modules\/sequelize/,
-        message: /Critical dependency: the request of a dependency is an expression/,
+        message:
+          /Critical dependency: the request of a dependency is an expression/,
       },
     ];
     return config;

@@ -61,7 +61,7 @@ export default function AuthForm() {
         return;
       }
 
-      router.push("/");
+      router.push("/dashboard");
     } catch (error) {
       console.error("Login error:", error);
       alert("Something went wrong. Try again.");
